@@ -128,4 +128,33 @@
 
 // onlyUnique(arr7);
 
+// 8. Spell out the alphabet The supplied array is a multidimensional array composed entirely of letters, broken down into
+// sets of 3. The letters within each set of 3 are in random order; and the overall array pieces are in random order, also.
+// The array is composed in such a way that it can be sorted in to an alphabetic order. Your function should reorder all of these pieces to accomplish this.
+
+// const alphabetize = (someArray) => {
+//   var arr=[]
+//   var sum=[]
+//   var array=[]
+//   for(let i=0;i<someArray.length;i++){
+//     arr=someArray[i];
+//     array[i]=arr.sort((a,b) => a.localeCompare(b))
+//     let p=0;
+//     for(let j=0;j<arr.length;j++){
+//       sum[j]=p+array[i].join(',')[j].charCodeAt();
+//       p=sum[j];
+//     }
+//     // for(let i=1;i<array.length;i++){
+      
+//     // }
+//   }
+//     // sum.sort((a,b)=>b-a);
+ 
+//   return array;
+// }
+// const Alpha=[["e","d","f"],["a","c","b"],["m","o","n"]]
+// console.log(alphabetize(Alpha))
+// [["a", "b", "c"], ["d", "e", "f"], ["m", "n", "o"]]
+
+
 
