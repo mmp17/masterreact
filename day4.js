@@ -156,5 +156,19 @@
 // console.log(alphabetize(Alpha))
 // [["a", "b", "c"], ["d", "e", "f"], ["m", "n", "o"]]
 
+//9.
 
+const findCommonWords = (firstArray, secondArray) => {
+  var arr=[]
+  for(let i=0;i<secondArray.length;i++){
+    let word=firstArray[i];
+      if(secondArray.includes(word)){
+        arr.push(word);
+      }
+  }
+  return arr;
+}
+const firstArray = ["dog", "cat","jiraf" ,"parrot"]
+const secondArray = ["lizard", "rat","jiraf", "cat","dog"]
+console.log(findCommonWords(firstArray, secondArray)) // ["cat"]
 
