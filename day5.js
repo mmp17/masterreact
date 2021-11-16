@@ -23,8 +23,8 @@ var array =
     },
     }
 
-    var {id, username, company, } = array;
-    var {company} = array.company;
+    var {id, username, address: {city, geo:{lng, lat}}} = array;
+   
 
 
-    console.log(id)
+    console.log(username, id, address.city);

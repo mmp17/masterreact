@@ -130,7 +130,8 @@
 
 // 8. Spell out the alphabet The supplied array is a multidimensional array composed entirely of letters, broken down into
 // sets of 3. The letters within each set of 3 are in random order; and the overall array pieces are in random order, also.
-// The array is composed in such a way that it can be sorted in to an alphabetic order. Your function should reorder all of these pieces to accomplish this.
+// The array is composed in such a way that it can be sorted in to an alphabetic order. Your function should reorder all of 
+//these pieces to accomplish this.
 
 // const alphabetize = (someArray) => {
 //   var arr=[]
@@ -144,31 +145,32 @@
 //       sum[j]=p+array[i].join(',')[j].charCodeAt();
 //       p=sum[j];
 //     }
-//     // for(let i=1;i<array.length;i++){
+//     for(let i=1;i<array.length;i++){
       
-//     // }
+//     }
+//     // sum.sort((a,b)=>a-b);
 //   }
-//     // sum.sort((a,b)=>b-a);
  
 //   return array;
 // }
 // const Alpha=[["e","d","f"],["a","c","b"],["m","o","n"]]
 // console.log(alphabetize(Alpha))
-// [["a", "b", "c"], ["d", "e", "f"], ["m", "n", "o"]]
+//[["a", "b", "c"], ["d", "e", "f"], ["m", "n", "o"]]
 
-//9.
+//9. Find the common words. Your function must accept 2 arrays, then return the common words from each. So, a new array
+//containing the words which occur at least once in each of the supplied arrays must be returned back.
 
 const findCommonWords = (firstArray, secondArray) => {
-  var arr=[]
+  var arr9=[];
   for(let i=0;i<secondArray.length;i++){
     let word=firstArray[i];
       if(secondArray.includes(word)){
-        arr.push(word);
+        arr9.push(word);
       }
   }
-  return arr;
+  return arr9;
 }
 const firstArray = ["dog", "cat","jiraf" ,"parrot"]
 const secondArray = ["lizard", "rat","jiraf", "cat","dog"]
-console.log(findCommonWords(firstArray, secondArray)) // ["cat"]
+console.log(findCommonWords(firstArray, secondArray)) // [ 'dog', 'cat', 'jiraf' ]
 
