@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100vh;
+    width: auto;    
+    color:rgb(11, 57, 211)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    margin-bottom: 20px;   
+}
+
+img {
+    height: 500px;
+    width: 400px;   
+}
