@@ -36,8 +36,3 @@ button.addEventListener('click', function(event){
     document.body.appendChild(img)
 })
 
-// function addimage() {
-//     var img = new Image();
-//     img.src = document.getElementById('imagename')
-//     img_home.appendChild(img);
-// }
