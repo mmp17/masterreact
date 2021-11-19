@@ -160,17 +160,32 @@
 //9. Find the common words. Your function must accept 2 arrays, then return the common words from each. So, a new array
 //containing the words which occur at least once in each of the supplied arrays must be returned back.
 
-const findCommonWords = (firstArray, secondArray) => {
-  var arr9=[];
-  for(let i=0;i<secondArray.length;i++){
-    let word=firstArray[i];
-      if(secondArray.includes(word)){
-        arr9.push(word);
-      }
-  }
-  return arr9;
+// const findCommonWords = (firstArray, secondArray) => {
+//   var arr9=[];
+//   for(let i=0;i<secondArray.length;i++){
+//     let word=firstArray[i];
+//       if(secondArray.includes(word)){
+//         arr9.push(word);
+//       }
+//   }
+//   return arr9;
+// }
+// const firstArray = ["dog", "cat","jiraf" ,"parrot"]
+// const secondArray = ["lizard", "rat","jiraf", "cat","dog"]
+// console.log(findCommonWords(firstArray, secondArray)) // [ 'dog', 'cat', 'jiraf' ]
+
+// 10. Sort The Array
+const sortTheArray = (someArray) => {
+    var arrOfnum=[]
+    var arrOfword=[]
+    for(let i=0;i<someArray.length;i++){
+      if(typeof someArray[i] === "number"){
+        arrOfnum.push(someArray[i])
+      } else{arrOfword.push(someArray[i])}
+    }
+    return arrOfnum.sort((a,b)=>a-b).concat(arrOfword.sort((a,b)=>a.localeCompare(b)))
+    
 }
-const firstArray = ["dog", "cat","jiraf" ,"parrot"]
-const secondArray = ["lizard", "rat","jiraf", "cat","dog"]
-console.log(findCommonWords(firstArray, secondArray)) // [ 'dog', 'cat', 'jiraf' ]
+console.log(sortTheArray(['c', 6, 'q', 'w', 45, 'k', 99,'d', 6, 1]))
+//[ 1,   6,   6,   45,  99, 'c', 'd', 'k', 'q', 'w']
 
