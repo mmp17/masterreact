@@ -174,18 +174,24 @@
 // const secondArray = ["lizard", "rat","jiraf", "cat","dog"]
 // console.log(findCommonWords(firstArray, secondArray)) // [ 'dog', 'cat', 'jiraf' ]
 
-// 10. Sort The Array
-const sortTheArray = (someArray) => {
-    var arrOfnum=[]
-    var arrOfword=[]
-    for(let i=0;i<someArray.length;i++){
-      if(typeof someArray[i] === "number"){
-        arrOfnum.push(someArray[i])
-      } else{arrOfword.push(someArray[i])}
-    }
-    return arrOfnum.sort((a,b)=>a-b).concat(arrOfword.sort((a,b)=>a.localeCompare(b)))
+// // 10. Sort The Array
+// const sortTheArray = (someArray) => {
+//     var arrOfnum=[]
+//     var arrOfword=[]
+//     for(let i=0;i<someArray.length;i++){
+//       if(typeof someArray[i] === "number"){
+//         arrOfnum.push(someArray[i])
+//       } else{arrOfword.push(someArray[i])}
+//     }
+//     return arrOfnum.sort((a,b)=>a-b).concat(arrOfword.sort((a,b)=>a.localeCompare(b)))
     
-}
-console.log(sortTheArray(['c', 6, 'q', 'w', 45, 'k', 99,'d', 6, 1]))
-//[ 1,   6,   6,   45,  99, 'c', 'd', 'k', 'q', 'w']
+// }
+// console.log(sortTheArray(['c', 6, 'q', 'w', 45, 'k', 99,'d', 6, 1]))
+// //[ 1,   6,   6,   45,  99, 'c', 'd', 'k', 'q', 'w']
 
+function handleChange() {
+  const h2 = document.querySelector('h2');
+  const inputEl = document.querySelector('input');
+  h2.innerHTML = inputEl.value;
+  console.log('Changing...')
+}
