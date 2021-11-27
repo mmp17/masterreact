@@ -62,18 +62,32 @@ var food = [
     }
 ]
 
-let reducer = food.reduce((result, item) => {
-    const {category, price, quantity} = item;
-    const totalItemPrice = price * quantity;
-    if(item.category === 'lunch') {
-        result.lunch += totalItemPrice
-    } else if (category === 'dinner') {
-        result.dinner += totalItemPrice
+// let reducer = food.reduce((result, item) => {
+//     const {category, price, quantity} = item;
+//     const totalItemPrice = price * quantity;
+//     if(item.category === 'lunch') {
+//         result.lunch += totalItemPrice
+//     } else if (category === 'dinner') {
+//         result.dinner += totalItemPrice
+//     } else {
+//         result.breakfast += totalItemPrice
+//     }
+
+//     return result;
+// },{breakfast: 0, lunch: 0, dinner: 0})
+
+// console.log(reducer);
+
+
+const highLowPrice = food.map(item => {
+    if(item.price <= 3) {
+        return {...item, PriceRate: 'Inexpensive'}
+    } 
+    else if (item.price > 3 && item.price <= 7) {
+        return {...item, PriceRate: 'Moderate'}
     } else {
-        result.breakfast += totalItemPrice
+        return {...item, PriceRate: 'Expensive'}
     }
+});
 
-    return result;
-},{breakfast: 0, lunch: 0, dinner: 0})
-
-console.log(reducer);
+console.log(highLowPrice);
